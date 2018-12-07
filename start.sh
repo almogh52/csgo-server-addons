@@ -1,0 +1,1 @@
+./srcds_run -game csgo -console -usercon +game_type 0 +sv_hibernate_when_empty 0 +game_mode 1 +sv_password 123456 +mapgroup "<allmaps>" +map "de_dust2" -authkey 506A73111BAAA0DF12CBC401B628E84F -maxplayers_override 10 -tickrate 64 +hostname "Streamer Dor" -port 27015 -insecure +login anonymous +sv_lan 0 +sv_setsteamaccount A64601D5E392198224FE21A5F7A7C8C1 +exec esl5on5.cfg
