@@ -2,7 +2,7 @@
 SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
 # Update the server app using steamcmd
-../steamcmd/steamcmd.sh +login anonymous +force_install_dir $SCRIPTPATH +app_update 740 validate +quit
+../steamcmd/steamcmd.sh +login anonymous +force_install_dir $SCRIPTPATH +app_update 740 +quit
 
 # Download sourcemod
 cd csgo
