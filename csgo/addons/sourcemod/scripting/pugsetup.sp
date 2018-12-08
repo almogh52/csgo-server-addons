@@ -6,7 +6,7 @@
 #include "include/logdebug.inc"
 #include "include/pugsetup.inc"
 #include "include/restorecvars.inc"
-#include "pugsetup/util.sp"
+#include "pugsetup/generic.sp"
 
 #undef REQUIRE_EXTENSIONS
 #include <SteamWorks>
@@ -242,10 +242,10 @@ public void OnPluginStart() {
       "sm_pugsetup_autoupdate", "1",
       "Whether the plugin may (if the \"Updater\" plugin is loaded) automatically update.");
   g_DemoNameFormatCvar = CreateConVar(
-      "sm_pugsetup_demo_name_format", "pug_{TIME}_{MAP}",
+      "sm_pugsetup_demo_name_format", "pug_{MAP}_{TIME}",
       "Naming scheme for demos. You may use {MAP}, {TIME}, and {TEAMSIZE}. Make sure there are no spaces or colons in this.");
   g_DemoTimeFormatCvar = CreateConVar(
-      "sm_pugsetup_time_format", "%Y-%m-%d_%H%M",
+      "sm_pugsetup_time_format", "%Y-%m-%d_%H",
       "Time format to use when creating demo file names. Don't tweak this unless you know what you're doing! Avoid using spaces or colons.");
   g_DisplayMapVotesCvar =
       CreateConVar("sm_pugsetup_display_map_votes", "1",
