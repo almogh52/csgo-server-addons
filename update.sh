@@ -10,7 +10,7 @@ curl -sqL "https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git966-linux.
 curl -sqL "https://sm.alliedmods.net/smdrop/1.9/sourcemod-1.9.0-git6266-linux.tar.gz" | tar zxvf -
 
 # Check if the data folder already exists, if it exists, save it as data-backup
-DATA_DIR = $SCRIPTPATH/csgo/addons/sourcemod/data
+DATA_DIR=$SCRIPTPATH/csgo/addons/sourcemod/data
 if [ -d $DATA_DIR ]; then
     # Change the name of the directory to data-backup
     mv $DATA_DIR "$DATA_DIR-backup"
