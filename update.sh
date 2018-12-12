@@ -6,8 +6,12 @@ SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
 # Download metamod and sourcemod
 cd csgo
-curl -sqL "https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git966-linux.tar.gz" | tar zxvf -
-curl -sqL "https://sm.alliedmods.net/smdrop/1.9/sourcemod-1.9.0-git6266-linux.tar.gz" | tar zxvf -
+
+METAMOD_LATEST_VERSION="$(curl "https://mms.alliedmods.net/mmsdrop/1.10/mmsource-latest-linux")"
+curl -sqL "https://mms.alliedmods.net/mmsdrop/1.10/$METAMOD_LATEST_VERSION" | tar zxvf -
+
+SOURCEMOD_LATEST_VERSION="$(curl "https://sm.alliedmods.net/smdrop/1.9/sourcemod-latest-linux")"
+curl -sqL "https://sm.alliedmods.net/smdrop/1.9/$SOURCEMOD_LATEST_VERSION" | tar zxvf -
 
 # Check if the data folder already exists, if it exists, save it as data-backup
 DATA_DIR=$SCRIPTPATH/csgo/addons/sourcemod/data
