@@ -99,7 +99,7 @@ public void EndKnifeRound(bool swap) {
     }
   }
 
-  ChangeState(GameState_GoingLive);
+  //ChangeState(GameState_GoingLive); - This causes crash with ws plugin - no need for this since BeginLO3 timer does this as well
   if (g_KnifeCvarRestore != INVALID_HANDLE) {
     RestoreCvars(g_KnifeCvarRestore);
     CloseCvarStorage(g_KnifeCvarRestore);
